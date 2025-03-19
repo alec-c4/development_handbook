@@ -2,4 +2,4 @@
 
 ## Translations
 
-- [Русский](ru/00-index.md)
+- [Русский](ru/README.md)
