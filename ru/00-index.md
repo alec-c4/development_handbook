@@ -17,6 +17,7 @@
 2.  [Разработка приложений - Ruby on Rails](code/02-rails-development.md)
 3.  [Разработка приложений - Next/React](code/03-react-development.md)
 4.  [Разработка приложений - Svelte/SvelteKit](code/04-svelte-development.md)
+5.  [Разработка приложений - 1С](code/05-1c-development.md)
 
 ## Инструментарий - Базы данных
 
