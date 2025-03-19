@@ -10,153 +10,101 @@
 
 В качестве основного фреймворка используется SvelteKit с компонентным фреймворком Svelte.
 
-| **Тип модуля**      | **Название фреймворка** | **Ссылка на репозитарий и документацию**                      |
-|---------------------|-------------------------|----------------------------------------------------------------|
-| Веб-приложение      | SvelteKit              | <https://github.com/sveltejs/kit>                              |
-|                     |                         | <https://kit.svelte.dev/docs>                                  |
-| UI-компоненты       | Svelte                  | <https://github.com/sveltejs/svelte>                           |
-|                     |                         | <https://svelte.dev/docs>                                      |
+| **Тип модуля** | **Название фреймворка** | **Ссылка на репозитарий и документацию** |
+| -------------- | ----------------------- | ---------------------------------------- |
+| Веб-приложение | SvelteKit               | <https://github.com/sveltejs/kit>        |
+|                |                         | <https://kit.svelte.dev/docs>            |
+| UI-компоненты  | Svelte                  | <https://github.com/sveltejs/svelte>     |
+|                |                         | <https://svelte.dev/docs>                |
 
 ## Библиотеки
 
-| **Решаемая задача**              | **Название библиотеки** | **Ссылка на репозитарий и документацию**                    |
-|----------------------------------|-------------------------|-----------------------------------------------------------------|
-| Стилизация                       | TailwindCSS            | <https://github.com/tailwindlabs/tailwindcss>                   |
-| Валидация форм                   | Zod                    | <https://github.com/colinhacks/zod>                            |
-| Управление состоянием            | Svelte Stores          | <https://svelte.dev/docs#run-time-svelte-store>                |
-| Интернационализация              | svelte-i18n            | <https://github.com/kaisermann/svelte-i18n>                    |
-| Линтер                           | ESLint                 | <https://eslint.org>                                           |
-| Форматирование кода              | Prettier               | <https://prettier.io>                                         |
-| Компоненты UI                    | Skeleton UI            | <https://github.com/skeletonlabs/skeleton>                     |
-| Визуализация данных              | D3.js или Chart.js     | <https://github.com/d3/d3>                                     |
-|                                  |                         | <https://github.com/chartjs/chart.js>                           |
+| **Решаемая задача**   | **Название библиотеки** | **Ссылка на репозитарий и документацию**        |
+| --------------------- | ----------------------- | ----------------------------------------------- |
+| Стилизация            | TailwindCSS             | <https://github.com/tailwindlabs/tailwindcss>   |
+| Валидация форм        | Zod                     | <https://github.com/colinhacks/zod>             |
+| Управление состоянием | Svelte Stores           | <https://svelte.dev/docs#run-time-svelte-store> |
+| Интернационализация   | svelte-i18n             | <https://github.com/kaisermann/svelte-i18n>     |
+| Линтер                | ESLint                  | <https://eslint.org>                            |
+| Форматирование кода   | Prettier                | <https://prettier.io>                           |
+| Компоненты UI         | Skeleton UI             | <https://github.com/skeletonlabs/skeleton>      |
+| Визуализация данных   | D3.js или Chart.js      | <https://github.com/d3/d3>                      |
+|                       |                         | <https://github.com/chartjs/chart.js>           |
 
 ## Основные положения
 
 1. Код должен соответствовать JavaScript/TypeScript Style Guide и рекомендациям Svelte
-
 2. Использовать TypeScript для большей типобезопасности и лучшей документации кода
-
 3. Придерживаться компонентно-ориентированного подхода с четким разделением ответственности
-
 4. Для стилизации приложения использовать TailwindCSS
-
 5. Для сложных форм использовать SuperForms и Zod-валидацию
-
 6. Активно использовать встроенные возможности SvelteKit:
    - Файловая маршрутизация
    - Серверные и клиентские endpoint'ы
    - Server-side rendering (SSR)
    - Адаптеры для различных хостинг-платформ
-
 7. Использовать SvelteKit Form Actions для обработки форм
-
 8. Применять подход Progressive Enhancement для улучшения доступности
-
 9. В проекте должны использоваться самые свежие стабильные версии библиотек
-
 10. Еженедельно для всех приложений, находящихся на поддержке, производится обновление зависимостей
-
 11. Прохождение Google Page Speed/Lighthouse - не ниже 95 баллов для мобильной и веб-версий
-
 12. Использование PurgeCSS для уменьшения размера CSS-файлов
-
 13. Наличие тёмной темы и корректное отображение в ней
-
 14. Все сообщения локализованы с использованием svelte-i18n
-
 15. Дата и время отображаются с учетом локального времени пользователя
-
 16. Поддержка accessibility standards - WCAG - [https://www.a11yproject.com/checklist/](https://www.a11yproject.com/checklist/)
-
 17. Для статических частей приложения использовать prerendering и статическую генерацию
-
 18. Оптимизировать загрузку изображений с помощью встроенных в SvelteKit механизмов
-
 19. Все чувствительные данные не должны храниться на клиенте
-
 20. Активно использовать Svelte transitions и animations для создания плавного пользовательского интерфейса
 
-## Вывод проекта в продакшн -- чеклист
+## Вывод проекта в продакшн - чеклист
 
 1. Тесты проходят
-
 2. Нет ошибок линтера (ESLint)
-
 3. Зависимости обновлены
-
 4. Код проверен на уязвимости безопасности
-
 5. Оптимизация сборки:
    - Использование правильного адаптера SvelteKit (node, static, vercel, netlify и др.)
    - Минификация CSS и JavaScript
    - Оптимизация изображений
    - Настройка кэширования статических ресурсов
-
 6. Аудит производительности через Lighthouse/PageSpeed Insights
-
 7. Аудит доступности (A11y)
-
 8. Правильные HTTP-заголовки для безопасности (CSP, HSTS и др.)
-
 9. Наличие мониторинга клиентских ошибок (Sentry, LogRocket)
-
 10. Соответствие SEO-требованиям:
     - Корректные мета-теги
     - Структурированные данные
     - Правильная организация sitemap.xml
     - robots.txt
-
 11. Проверка на различных устройствах и браузерах
-
 12. Проверка на медленных соединениях
-
 13. Наличие документации
-
 14. Наличие бэкапа
-
 15. ВСЕ службы и сервисы зарегистрированы на компанию и оплачены
-
 16. Исходный код отгружен в git-репозитарий
-
 17. Настроен CI/CD pipeline
-
 18. Выделены ресурсы для production-staging-development сред
 
 ### Внешние проекты
 
 1. Наличие политики конфиденциальности
-
 2. Наличие пользовательского соглашения
-
 3. Наличие предупреждения о cookies
-
 4. Соответствие GDPR - [The GDPR Checklist - Your GDPR compliance checklist](https://gdprchecklist.io)
-
 5. Соответствие CCPA
-
 6. Соответствие ФЗ-152 - [https://legal-box.ru/chek-list](https://legal-box.ru/chek-list) и [https://docshell.ru/personal-data/check_list_docs_proverka_rkn_pdn_urlitso/](https://docshell.ru/personal-data/check_list_docs_proverka_rkn_pdn_urlitso/)
-
 7. Наличие шаблона для удаления персональных данных (применимо в случае запроса пользователем удаления персональных данных из системы)
-
 8. Проверить по SEO-чеклисту - [https://backlinko.com/seo-checklist](https://backlinko.com/seo-checklist)
-
 9. Проверить корректность заполнения robots.txt
-
 10. Проверить наличие sitemaps
-
 11. Проверить наличие permalinks
-
 12. Проверить наличие и корректность meta-тегов
-
 13. Проверить наличие и корректность open graph-тегов
-
 14. Проверить наличие аналитики (GA, Metrika, Facebook Pixel), желательно в GTM
-
 15. Добавить сайт в Yandex Webmaster
-
 16. Добавить сайт в Google Search Console
-
 17. Добавить сайт в Bing Webmaster Tools
 
 ### Внутренние проекты
